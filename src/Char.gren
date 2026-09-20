@@ -279,13 +279,10 @@ toCode =
 
     fromCode 0x0001F603 == '😃'
 
-    fromCode -1 == '�'
-
-The full range of unicode is from `0` to `0x10FFFF`. With numbers outside that
-range, you get [the replacement character][fffd].
+The full range of unicode is from `0` to `0x10FFFF`. Numbers outside that
+range throw a `RangeError`.
 
 [cp]: https://en.wikipedia.org/wiki/Code_point
-[fffd]: https://en.wikipedia.org/wiki/Specials_(Unicode_block)#Replacement_character
 
 -}
 fromCode : Int -> Char
